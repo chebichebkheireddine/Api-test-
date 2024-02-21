@@ -21,6 +21,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 // This Route for call api to use it 
 Route::get("List/{id?}",[phoneController::class,"listPhone"]);
+// this is for post Data into db
 Route::post("Post",[listeController::class,"listTest"]);
 // Put to update the data in db
 Route::put("update",[listeController::class,"update"]);
+// Sherch in Api is simple to do it 
+Route::get("Search",[listeController::class,"SearchList"]);

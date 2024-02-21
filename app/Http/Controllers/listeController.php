@@ -57,6 +57,12 @@ class listeController extends Controller
 
             return ["Reusalt"=>"failed updating"];
         }
-        
     }   
+
+    // This is for search post 
+    function SearchList(Request $req){
+return lists::()"name","list",;
+
+
+    }
 }
