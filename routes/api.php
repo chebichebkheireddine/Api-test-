@@ -26,4 +26,5 @@ Route::post("Post",[listeController::class,"listTest"]);
 // Put to update the data in db
 Route::put("update",[listeController::class,"update"]);
 // Sherch in Api is simple to do it 
-Route::get("Search",[listeController::class,"SearchList"]);
+Route::get("search/{name}",[listeController::class,"SearchList"]);
+// Note in this step you must see the link of api and test it if work or not 
