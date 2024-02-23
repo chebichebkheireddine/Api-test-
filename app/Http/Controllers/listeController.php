@@ -63,8 +63,7 @@ class listeController extends Controller
     // This is for search post 
     function SearchList($name)
     {
-        // This is for just test if id is work or not
-        
+        // This return is for search in databases with  any word  
         return lists::where("name","like","%".$name."%")->get();
     }
 }
