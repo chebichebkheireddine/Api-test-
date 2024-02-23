@@ -55,15 +55,30 @@ class listeController extends Controller
         if ($test) {
             return ["Reusalt" => "Done"];
         } else {
-
+            
             return ["Reusalt" => "failed updating"];
         }
     }
-
+    
     // This is for search post 
     function SearchList($name)
     {
         // This return is for search in databases with  any word  
         return lists::where("name","like","%".$name."%")->get();
+    }
+
+    // Delete Function 
+    function delete($id){
+        // return ["Result"=>"Delete is done good ".$id];
+        $list = lists::find($id);
+        $result= $list->delete();
+        if($result){
+            return ["Result"=>"Delete is done good "];
+        }
+        else{
+
+            return ["Result"=>"Delete is not be done plese Repite the prossers  "];
+            
+        }
     }
 }
