@@ -133,6 +133,17 @@ class LabController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //Delet 
+        $labs=Lab::find($id);
+        $result= $labs->delete();
+        if ($result) {
+            # code...
+            return ["Reusalt"=>" Done delete"];
+        } else {
+            # code...
+            return ["Reusalt"=>"  delete"];
+            
+        }
+        
     }
 }
