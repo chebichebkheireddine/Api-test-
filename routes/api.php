@@ -30,3 +30,6 @@ Route::get("search/{name}",[listeController::class,"SearchList"]);
 // Note in this step you must see the link of api and test it if work or not
 // Delete Route to use it 
 Route::delete("delete/{id?}",[listeController::class,"delete"]); 
+
+// API validation
+Route::post("save",[listeController::class,"saveData"]);
