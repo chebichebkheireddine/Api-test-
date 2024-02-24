@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LabController;
 use App\Http\Controllers\LabsController;
 use App\Http\Controllers\listeController;
 use App\Http\Controllers\phoneController;
@@ -36,3 +37,8 @@ Route::post("save",[listeController::class,"saveData"]);
 
 #This  is for Labs Api to test 
 Route::get("Labslist",[LabsController::class,"index"]);
+// Lbs Resources
+Route::apiResource("Labs",LabController::class);
+// Change the to put to update
+Route::apiResource("Labs/{id?}",LabController::class);
+
