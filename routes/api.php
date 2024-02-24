@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LabsController;
 use App\Http\Controllers\listeController;
 use App\Http\Controllers\phoneController;
 use Illuminate\Http\Request;
@@ -30,6 +31,8 @@ Route::get("search/{name}",[listeController::class,"SearchList"]);
 // Note in this step you must see the link of api and test it if work or not
 // Delete Route to use it 
 Route::delete("delete/{id?}",[listeController::class,"delete"]); 
-
 // API validation
 Route::post("save",[listeController::class,"saveData"]);
+
+#This  is for Labs Api to test 
+Route::get("Labslist",[LabsController::class,"index"]);
